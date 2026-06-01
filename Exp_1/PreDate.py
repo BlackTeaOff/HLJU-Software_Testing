@@ -35,9 +35,11 @@ def PreDate(date):
     # 跨月, 但不用跨年(月数-1, 天数直接就是上一个月的最后一天)
     if (day == 1 and month > 1):
         print(f"前一天: {year}年{month - 1}月{daysOfMonth[month - 1]}日\n")
+        return
     # 跨月也跨年(年数-1, 月数直接是12月, 天数就是12月的最后一天)
     if (day == 1 and month == 1):
         print(f"前一天: {year - 1}年12月{daysOfMonth[12]}日\n")
+        return
 def main():
     PreDate(input("请输入日期: "))
 
